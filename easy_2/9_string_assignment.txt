@@ -1,0 +1,25 @@
+Take a look at the following code:
+
+  name = 'Bob'
+  save_name = name
+  name = 'Alice'
+  puts name, save_name
+
+What does this code print out? Think about it for a moment before continuing.
+
+The code prints:
+  Alice
+  Bob
+
+look at something a bit different:
+
+  name = 'Bob'
+  save_name = name
+  name.upcase!
+  puts name, save_name
+
+What does this print out? Can you explain these results?
+  name and save_name are pointing to the same string. When upcase! is applied,
+  it mutates the orignal string and now name and save_name are pointing the upcase version of 'Bob'. Thus, what is printed is:
+  BOB
+  BOB
